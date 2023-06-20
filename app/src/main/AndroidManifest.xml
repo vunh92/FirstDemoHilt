@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".BaseApplication"
+        android:largeHeap="true"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FirstDemoHilt"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA4iajiV1FZQcjvC1mt7Rw1gzc16VI3ZGk" />
+
+        <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true"
+            android:theme="@style/ThemeSplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MapsActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustNothing">
+        </activity>
+
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.account.AccountActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.account.ChangePasswordActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.account.UpdateInfoActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.notification.NotificationActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.notification.SettingNotificationActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.setting.SettingActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.news.NewsActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.maintenance.MaintenanceActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.maintenance.history.HistoryMaintenanceActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.maintenance.step.StepMaintenanceActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.limit.LimitActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.support.SupportActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.stickheader.SimpleStickHeaderActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.test.TestListActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="false">
+        </activity>
+    </application>
+
+</manifest>

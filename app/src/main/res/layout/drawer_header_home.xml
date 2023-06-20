@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_header_height"
+        android:src="@drawable/menu_header"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_header_height"
+        android:background="@color/colorPrimary"
+        android:alpha="0.85"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:padding="@dimen/margin_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/header_avatar_im"
+            android:layout_width="@dimen/size_avatar_default"
+            android:layout_height="@dimen/size_avatar_default"
+            android:src="@drawable/avatar"
+            app:civ_border_width="@dimen/radius_extra_extra_small"
+            app:civ_border_color="@color/blueGrey"/>
+        <TextView
+            style="@style/DefaultTextView.Header"
+            android:id="@+id/header_title_tv"
+            android:text="Title" />
+
+        <TextView
+            style="@style/DefaultTextView"
+            android:id="@+id/header_detail_tv"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="Detail" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

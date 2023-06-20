@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/top_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nav_header_height"
+            android:src="@drawable/menu_header"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nav_header_height"
+            android:background="@color/colorPrimary"
+            android:alpha="0.85"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/account_avatar_im"
+            android:layout_width="@dimen/size_avatar_high"
+            android:layout_height="@dimen/size_avatar_high"
+            android:layout_centerInParent="true"
+            android:src="@drawable/avatar"
+            app:civ_border_color="@color/blueGrey"
+            app:civ_border_width="@dimen/radius_extra_extra_small" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="@dimen/margin_default"
+            android:layout_marginTop="170dp"
+            android:layout_marginBottom="@dimen/margin_default"
+            app:contentPadding="@dimen/padding_default"
+            app:cardCornerRadius="@dimen/radius_default"
+            app:cardElevation="@dimen/size_small">
+            <TextView
+                style="@style/DefaultTextView.Label"
+                android:id="@+id/account_name_tv"
+                android:layout_gravity="center"
+                android:text="@string/app_name" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/colorTransparent"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_alignParentTop="true">
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_gravity="center"
+                android:text="@string/account_title"/>
+        </androidx.appcompat.widget.Toolbar>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/top_rl">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_default"
+                android:layout_marginTop="@dimen/margin_default"
+                android:layout_marginBottom="@dimen/margin_default"
+                app:contentPadding="@dimen/padding_medium"
+                app:cardCornerRadius="@dimen/radius_default"
+                app:cardElevation="@dimen/size_small">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_default"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="@dimen/size_icon_medium"
+                            android:layout_height="@dimen/size_icon_medium"
+                            android:layout_marginEnd="@dimen/margin_default"
+                            android:src="@drawable/ic_phone"/>
+                        <TextView
+                            style="@style/DefaultTextView.Header"
+                            android:id="@+id/account_info_phone"
+                            android:layout_gravity="center"
+                            android:text="0123456789" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_default"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="@dimen/size_icon_medium"
+                            android:layout_height="@dimen/size_icon_medium"
+                            android:layout_marginEnd="@dimen/margin_default"
+                            android:src="@drawable/ic_mail"/>
+                        <TextView
+                            style="@style/DefaultTextView.Header"
+                            android:id="@+id/account_info_email"
+                            android:layout_gravity="center"
+                            android:text="mapdemo@gmail.com" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_default"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="@dimen/size_icon_medium"
+                            android:layout_height="@dimen/size_icon_medium"
+                            android:layout_marginEnd="@dimen/margin_default"
+                            android:src="@drawable/ic_location"/>
+                        <TextView
+                            style="@style/DefaultTextView.Header"
+                            android:id="@+id/account_info_address"
+                            android:layout_gravity="center"
+                            android:text="Số 1361 Lê Văn Lương, xã Phước Kiển, huyện Nhà Bèm Hồ Chí Minh" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_default"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="@dimen/size_icon_medium"
+                            android:layout_height="@dimen/size_icon_medium"
+                            android:layout_marginEnd="@dimen/margin_default"
+                            android:src="@drawable/ic_car"/>
+                        <TextView
+                            style="@style/DefaultTextView.Header"
+                            android:layout_gravity="center"
+                            android:text="@string/account_total_car" />
+                        <TextView
+                            style="@style/DefaultTextView.Header"
+                            android:id="@+id/account_info_total_car"
+                            android:layout_gravity="center"
+                            android:text="1" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_default"
+                android:layout_marginTop="@dimen/margin_default"
+                android:layout_marginBottom="@dimen/margin_default"
+                app:contentPadding="@dimen/padding_medium"
+                app:cardCornerRadius="@dimen/radius_default"
+                app:cardElevation="@dimen/size_small">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        style="@style/DefaultTextView.Label"
+                        android:layout_gravity="center"
+                        android:text="@string/account_account_link" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_default"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="@dimen/size_icon_medium"
+                            android:layout_height="@dimen/size_icon_medium"
+                            android:layout_marginEnd="@dimen/margin_default"
+                            android:src="@drawable/ic_google"/>
+                        <TextView
+                            style="@style/DefaultTextView.Header"
+                            android:layout_weight="1"
+                            android:text="@string/field_google" />
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/account_link_google_sc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:checked="false"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_default"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="@dimen/size_icon_medium"
+                            android:layout_height="@dimen/size_icon_medium"
+                            android:layout_marginEnd="@dimen/margin_default"
+                            android:src="@drawable/ic_facebook"/>
+                        <TextView
+                            style="@style/DefaultTextView.Header"
+                            android:layout_weight="1"
+                            android:text="@string/field_facebook" />
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/account_link_facebook_sc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:checked="true"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_default"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="@dimen/size_icon_medium"
+                            android:layout_height="@dimen/size_icon_medium"
+                            android:layout_marginEnd="@dimen/margin_default"
+                            android:src="@drawable/ic_zalo"/>
+                        <TextView
+                            style="@style/DefaultTextView.Header"
+                            android:layout_weight="1"
+                            android:text="@string/field_zalo" />
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/account_link_zalo_sc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:checked="true"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

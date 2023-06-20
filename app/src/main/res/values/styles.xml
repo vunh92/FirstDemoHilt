@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="word_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">26dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:paddingLeft">8dp</item>
+    </style>
+
+    <!-- Button -->
+    <style name="DefaultButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/size_default</item>
+        <item name="android:paddingEnd">@dimen/size_default</item>
+        <item name="android:layout_marginStart">@dimen/margin_small</item>
+        <item name="android:layout_marginEnd">@dimen/margin_small</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_default</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:elevation">@dimen/size_small</item>
+    </style>
+    <style name="BorderButton" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/size_default</item>
+        <item name="android:paddingEnd">@dimen/size_default</item>
+        <item name="android:backgroundTint">@color/colorTransparent</item>
+        <item name="android:layout_marginStart">@dimen/margin_small</item>
+        <item name="android:layout_marginEnd">@dimen/margin_small</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/text_size_default</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="strokeColor">@color/colorPrimary</item>
+        <item name="strokeWidth">@dimen/_1ssp</item>
+    </style>
+
+    <!-- TextView -->
+    <style name="DefaultTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/padding_small</item>
+        <item name="android:textSize">@dimen/text_size_default</item>
+        <item name="android:textColor">@color/textColorDefault</item>
+    </style>
+    <style name="DefaultTextView.Label" parent="DefaultTextView">
+        <item name="android:textColor">@color/textColorDefault</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="DefaultTextView.Header" parent="DefaultTextView">
+        <item name="android:textColor">@color/textColorHeader</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="DefaultTextView.Detail" parent="DefaultTextView">
+        <item name="android:textColor">@color/textColorDetail</item>
+    </style>
+
+    <!-- Edittext -->
+    <style name="EdittextGey">
+        <item name="android:textSize">@dimen/text_size_default</item>
+        <item name="android:textColor">@color/textColorDetail</item>
+        <item name="hintTextColor">@color/hint</item>
+<!--        <item name="fontFamily">@font/arial</item>-->
+        <item name="android:state_active">false</item>
+        <item name="singleLine">true</item>
+    </style>
+
+    <style name="EdtManualInput" parent="EdittextGey">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingVertical" tools:targetApi="o">@dimen/_6ssp</item>
+        <item name="android:paddingHorizontal" tools:targetApi="o">@dimen/_8ssp</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:inputType">text</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:background">@drawable/radius_border_background</item>
+        <item name="contentDescription">@null</item>
+        <item name="android:autofillHints" tools:targetApi="o">@null</item>
+        <item name="android:importantForAutofill" tools:targetApi="o">no</item>
+    </style>
+
+    <!-- Bottom Sheet -->
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!-- CardView -->
+    <style name="DefaultCardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin_small</item>
+        <item name="android:layout_marginEnd">@dimen/margin_small</item>
+        <item name="android:layout_marginTop">@dimen/margin_small</item>
+        <item name="android:layout_marginBottom">@dimen/margin_small</item>
+        <item name="contentPadding">@dimen/size_default</item>
+        <item name="cardCornerRadius">@dimen/radius_default</item>
+        <item name="cardElevation">@dimen/size_small</item>
+    </style>
+
+    <!-- DateTimePiker -->
+    <style name="ThemeDatePickerDialog" parent="ThemeOverlay.AppCompat.Dialog">
+        <!--header background-->
+        <item name="colorAccent">@color/colorPrimary</item>
+        <!--header textcolor-->
+        <item name="android:textColorPrimaryInverse">@color/textColorDefault</item>
+        <item name="android:textColorSecondaryInverse">@color/textColorDefault</item>
+        <!--body background-->
+<!--        <item name="android:windowBackground">#000099</item>-->
+        <!--selected day-->
+        <item name="android:colorControlActivated">@color/colorAccent</item>
+        <!--days of the month-->
+<!--        <item name="android:textColorPrimary">#ffff00</item>-->
+        <!--days of the week-->
+        <item name="android:textColorSecondary">@color/textColorDetail</item>
+        <!--cancel&ok-->
+<!--        <item name="android:textColor">#00ffff</item>-->
+    </style>
+</resources>

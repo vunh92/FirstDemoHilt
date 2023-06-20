@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "outInRestrictedArea": true,
+  "forgotTurnOffCar": false,
+  "disconnectedOverAnHour": true,
+  "language": "vi",
+  "formatDate": "about",
+  "timeRefreshData": 10
+}

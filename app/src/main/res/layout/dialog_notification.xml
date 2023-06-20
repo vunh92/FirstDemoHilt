@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/black50">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/margin_medium"
+        android:background="@drawable/radius_background"
+        android:paddingStart="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="@dimen/padding_default">
+
+        <RelativeLayout
+            android:id="@+id/title_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radius_background_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/title_icon_iv"
+                android:layout_width="@dimen/size_higher"
+                android:layout_height="@dimen/size_higher"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_info"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/title_tv"
+                style="@style/DefaultTextView.Header"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/title_icon_iv"
+                android:text="@string/common_notification"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/description_tv"
+            style="@style/DefaultTextView"
+            android:layout_margin="@dimen/margin_default"
+            android:gravity="center|start"
+            android:text="Description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_rl" />
+
+        <TextView
+            android:id="@+id/no_btn"
+            style="@style/DefaultTextView.Header"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_high"
+            android:text="@string/common_no"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description_tv" />
+
+        <TextView
+            android:id="@+id/yes_btn"
+            style="@style/DefaultTextView.Header"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_high"
+            android:text="@string/common_yes"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/description_tv"
+            app:layout_constraintEnd_toStartOf="@id/no_btn"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

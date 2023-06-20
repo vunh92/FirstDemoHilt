@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fitsSystemWindows="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_back">
+
+        <TextView
+            android:id="@+id/toolbar_title_tv"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/setting_title" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/setting_desc_tv"
+        style="@style/DefaultTextView.Detail"
+        android:layout_below="@id/toolbar"
+        android:padding="@dimen/padding_default"
+        android:paddingStart="@dimen/padding_medium"
+        android:paddingEnd="@dimen/padding_medium"
+        android:text="@string/setting_title" />
+
+    <LinearLayout
+        android:id="@+id/setting_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setting_desc_tv"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/setting_language_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_default">
+
+            <ImageView
+                android:layout_width="@dimen/size_icon_default"
+                android:layout_height="@dimen/size_icon_default"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:src="@drawable/ic_language"
+                app:tint="@color/textColorDetail" />
+
+            <TextView
+                android:id="@+id/setting_language_title_tv"
+                style="@style/DefaultTextView"
+                android:layout_weight="1"
+                android:text="@string/setting_language" />
+
+            <TextView
+                android:id="@+id/setting_language_desc_tv"
+                style="@style/DefaultTextView"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:text="@string/language_vi"
+                android:textColor="@color/textColorDetail" />
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1ssp" />
+
+        <LinearLayout
+            android:id="@+id/setting_notification_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_default">
+
+            <ImageView
+                android:layout_width="@dimen/size_icon_default"
+                android:layout_height="@dimen/size_icon_default"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:src="@drawable/ic_notifications"
+                app:tint="@color/textColorDetail" />
+
+            <TextView
+                style="@style/DefaultTextView"
+                android:layout_weight="1"
+                android:text="@string/setting_notification" />
+
+            <ImageView
+                android:layout_width="@dimen/size_icon_default"
+                android:layout_height="@dimen/size_icon_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:src="@drawable/ic_arrow_right"
+                app:tint="@color/textColorDetail" />
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1ssp" />
+
+        <LinearLayout
+            android:id="@+id/setting_format_date_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_default">
+
+            <ImageView
+                android:layout_width="@dimen/size_icon_default"
+                android:layout_height="@dimen/size_icon_default"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:src="@drawable/ic_calendar"
+                app:tint="@color/textColorDetail" />
+
+            <TextView
+                android:id="@+id/setting_format_date_title_tv"
+                style="@style/DefaultTextView"
+                android:layout_weight="1"
+                android:text="@string/setting_format_date" />
+
+            <TextView
+                android:id="@+id/setting_format_date_desc_tv"
+                style="@style/DefaultTextView"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:text="@string/setting_about_time"
+                android:textColor="@color/textColorDetail" />
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1ssp" />
+
+        <LinearLayout
+            android:id="@+id/setting_time_refresh_data_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_default">
+
+            <ImageView
+                android:layout_width="@dimen/size_icon_default"
+                android:layout_height="@dimen/size_icon_default"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:src="@drawable/ic_time"
+                app:tint="@color/textColorDetail" />
+
+            <TextView
+                android:id="@+id/setting_time_refresh_data_title_tv"
+                style="@style/DefaultTextView"
+                android:layout_weight="1"
+                android:text="@string/setting_time_refresh_data" />
+
+            <TextView
+                android:id="@+id/setting_time_refresh_data_desc_tv"
+                style="@style/DefaultTextView"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:text="@string/setting_time_ten_second"
+                android:textColor="@color/textColorDetail" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/setting_app_info_tv"
+        style="@style/DefaultTextView.Detail"
+        android:layout_below="@id/setting_line"
+        android:padding="@dimen/padding_default"
+        android:paddingStart="@dimen/padding_medium"
+        android:paddingEnd="@dimen/padding_medium"
+        android:text="@string/app_info" />
+
+    <LinearLayout
+        android:id="@+id/setting_app_info_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setting_app_info_tv"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/setting_app_version_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_default">
+
+            <ImageView
+                android:layout_width="@dimen/size_icon_default"
+                android:layout_height="@dimen/size_icon_default"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:src="@drawable/ic_info"
+                app:tint="@color/textColorDetail" />
+
+            <TextView
+                style="@style/DefaultTextView"
+                android:layout_weight="1"
+                android:text="@string/app_version" />
+
+            <TextView
+                android:id="@+id/setting_app_version_desc_tv"
+                style="@style/DefaultTextView"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:text="1.0.0"
+                android:textColor="@color/textColorDetail" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

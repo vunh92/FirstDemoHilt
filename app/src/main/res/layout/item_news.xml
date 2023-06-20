@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorTransparent"
+    android:id="@+id/item_rl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/margin_default"
+        android:gravity="center_vertical">
+        <TextView
+            style="@style/DefaultTextView.Detail"
+            android:id="@+id/item_news_time"
+            android:layout_width="50dp"
+            tools:text="10:47"/>
+
+        <RelativeLayout
+            android:layout_width="@dimen/_21ssp"
+            android:layout_height="match_parent">
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="@dimen/_1ssp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10ssp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/size_icon_default"
+                android:layout_height="@dimen/size_icon_default"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_mail"
+                app:civ_border_color="@color/yellow"
+                app:civ_border_width="@dimen/size_small"
+                app:civ_fill_color="@color/yellow"/>
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            style="@style/DefaultCardView"
+            android:id="@+id/item_news_card"
+            android:layout_marginVertical="@dimen/margin_default"
+            app:contentPadding="0dp"
+            app:cardCornerRadius="@dimen/radius_small">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/padding_small"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/DefaultTextView.Header"
+                    android:layout_width="match_parent"
+                    android:id="@+id/item_news_title"
+                    tools:text="title"/>
+
+                <TextView
+                    style="@style/DefaultTextView.Detail"
+                    android:layout_width="match_parent"
+                    android:id="@+id/item_news_content"
+                    tools:text="content"/>
+
+            </LinearLayout>
+            
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</RelativeLayout>

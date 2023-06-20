@@ -1,0 +1,15 @@
+{
+  "id": 1,
+  "email": "george.bluth@reqres.in",
+  "first_name": "George",
+  "last_name": "Bluth",
+  "avatar": "https://reqres.in/img/faces/1-image.jpg",
+  "phone": "0123456789",
+  "address": "1361 Lê Văn Lương, Phước Kiển, Nhà Bè, TPHCM",
+  "totalCar": 1,
+  "createdCar": "2023-01-13",
+  "linkGoogle": true,
+  "linkFacebook": true,
+  "linkZalo": true,
+  "password": "123456"
+}

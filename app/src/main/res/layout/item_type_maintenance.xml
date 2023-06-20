@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorTransparent"
+    android:id="@+id/item_rl">
+    <androidx.cardview.widget.CardView
+        style="@style/DefaultCardView"
+        android:id="@+id/item_type_card"
+        app:cardCornerRadius="@dimen/radius_small">
+        <TextView
+            style="@style/DefaultTextView"
+            android:id="@+id/item_type_tv"
+            android:layout_gravity="center"
+            android:text="@string/first_maintenance_change_engine_oil" />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

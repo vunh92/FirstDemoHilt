@@ -1,0 +1,190 @@
+<resources>
+    <string name="app_name">Demo-Maps</string>
+    <string name="app_version">Phiên bản</string>
+    <string name="app_info">Thông tin ứng dụng</string>
+
+    <string name="common_next">Next</string>
+    <string name="common_close">Đóng</string>
+    <string name="common_ok">OK</string>
+    <string name="common_share">Share</string>
+    <string name="common_warning">Warning</string>
+    <string name="common_error">Error</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_success">Success</string>
+    <string name="common_yes">Yes</string>
+    <string name="common_no">No</string>
+    <string name="common_add">Thêm</string>
+    <string name="common_update">Cập nhật</string>
+    <string name="common_edit">Sửa</string>
+    <string name="common_delete">Xóa</string>
+    <string name="common_delete_all">Xóa tất cả</string>
+    <string name="common_input_search">Nhập để tìm kiếm</string>
+    <string name="common_filter">Bộ lọc</string>
+    <string name="common_notification">Thông báo</string>
+    <string name="common_update_fail">Cập nhật thất bại</string>
+    <string name="common_update_success">Cập nhật thành công</string>
+    <string name="common_field_not_empty">Required %s is not empty</string>
+    <string name="common_change">Thay đổi</string>
+    <string name="common_complete">Hoàn thành</string>
+    <string name="common_empty_data">Chưa có dữ liệu</string>
+    <string name="common_required_permission">Yêu cầu cấp quyền</string>
+
+    <!-- Time -->
+    <string name="time_second">giây</string>
+    <string name="time_minute">phút</string>
+    <string name="time_hour">giờ</string>
+
+    <!-- Field -->
+    <string name="field_username">Tên tài khoản</string>
+    <string name="field_email">Email</string>
+    <string name="field_address">Địa chỉ</string>
+    <string name="field_google">Google</string>
+    <string name="field_facebook">Facebook</string>
+    <string name="field_zalo">Zalo</string>
+
+    <!-- Login -->
+    <string name="login_sign_in">Đăng nhập</string>
+    <string name="login_sign_in_desc">Login to your account to access all the feature.</string>
+    <string name="login_sign_up">Đăng ký</string>
+    <string name="login_demo">Dùng thử</string>
+    <string name="login_username">Username/Email</string>
+    <string name="login_password">Password</string>
+    <string name="login_remember">Remember</string>
+    <string name="login_forgot_password">Forgot password?</string>
+    <string name="login_show_password">username: vunh@gmail.com\npassword: 12345678</string>
+    <string name="login_dont_have_account">I don\'t have an account</string>
+    <string name="login_welcome">Welcome %1$s</string>
+
+    <!-- Menu -->
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="menu_account">TÀI KHOẢN</string>
+    <string name="menu_notification">THÔNG BÁO</string>
+    <string name="menu_maintenance">BẢO TRÌ</string>
+    <string name="menu_limit">VÙNG GIỚI HẠN</string>
+    <string name="menu_news">BẢN TIN</string>
+    <string name="menu_setting">CÀI ĐẶT</string>
+    <string name="menu_map">BẢN ĐỒ</string>
+    <string name="menu_support">HỖ TRỢ KHÁCH HÀNG</string>
+    <string name="menu_logout">ĐĂNG XUẤT</string>
+    <string name="menu_car">XE</string>
+
+    <!-- Account -->
+    <string name="account_title">Thông tin tài khoản</string>
+    <string name="account_account_link">Liên kết tài khoản</string>
+    <string name="account_logout">Đăng xuất</string>
+    <string name="account_total_car">Tổng số xe:</string>
+    <string name="account_change_password">Đổi mật khẩu</string>
+    <string name="account_old_password">Mật khẩu cũ</string>
+    <string name="account_new_password">Mật khẩu mới</string>
+    <string name="account_confirm_new_password">Nhập lại mật khẩu mới</string>
+    <string name="account_update_info">Cập nhật thông tin</string>
+
+    <!-- Notification -->
+    <string name="notification_title">Thông báo</string>
+    <string name="notification_setting">Thiết lập thông báo</string>
+    <string name="notification_filter">Lọc thông báo</string>
+    <string name="notification_empty_title">Chưa có dữ liệu</string>
+    <string name="notification_empty_detail">Các thông báo được gửi từ xe của bạn sẽ\n hiển thị ở đây, bạn có thể thiết lập để nhận\n các loại thông báo khác nhau</string>
+    <string name="setting_notification_title">Cài đặt thông báo</string>
+    <string name="setting_notification_desc">Các cài đặt này sẽ không có tác dụng cho toàn bộ xe trong tài khoản</string>
+    <string name="setting_notification_out_in_restricted_area">Ra / vào vùng giới hạn</string>
+    <string name="setting_notification_forgot_turn_off_car">Quên tắt chìa khóa xe</string>
+    <string name="setting_notification_disconnected_over_an_hour">Mất kết nối tới hệ thống quá 1h</string>
+
+    <!-- Setting -->
+    <string name="setting_title">Cài đặt</string>
+    <string name="setting_language">Ngôn ngữ</string>
+    <string name="setting_notification">Cài đặt thông báo</string>
+    <string name="setting_format_date">Định dạng ngày</string>
+    <string name="setting_about_time">Khoảng thời gian</string>
+    <string name="setting_format_time">YYYY-MM-DD HH:mm:ss</string>
+    <string name="setting_time_refresh_data">Thời gian làm mới dữ liệu</string>
+    <string name="setting_time_ten_second">10 giây</string>
+    <string name="setting_time_twenty_second">20 giây</string>
+    <string name="setting_time_thirty_second">30 giây</string>
+
+    <!-- News -->
+    <string name="news_title">Bản tin</string>
+    <string name="news_empty_detail">Các thông báo, bản tin từ nhà cung cấp \n DemoMap sẽ được hiển thị tại đây. Nếu \n cần hỗ trợ bạn có thể liên hệ qua số Hotline \n để được trợ giúp</string>
+    <string name="news_call_hotline">Bấm để gọi 0334422586</string>
+
+    <!-- Maintenance -->
+    <string name="support_title">Bảo trì</string>
+    <string name="support_add">Tạo lịch mới</string>
+    <string name="support_filter">Lọc bảo trì</string>
+    <string name="support_empty_title">Chưa có dữ liệu</string>
+    <string name="support_empty_detail">Tạo các lịch bảo trì cho xe. Hệ thống sẽ nhắc nhở\n và ghi nhận việc bảo trì định kỳ</string>
+    <string name="support_select_car_need_maintenance">Chọn xe cần bảo trì</string>
+
+    <!-- Maintenance -->
+    <string name="history_maintenance_title">Lịch sử bảo trì</string>
+    <string name="maintenance_title">Bảo trì</string>
+    <string name="maintenance_add">Tạo lịch mới</string>
+    <string name="maintenance_filter">Lọc bảo trì</string>
+    <string name="maintenance_empty_title">Chưa có dữ liệu</string>
+    <string name="maintenance_empty_detail">Tạo các lịch bảo trì cho xe. Hệ thống sẽ nhắc nhở\n và ghi nhận việc bảo trì định kỳ</string>
+    <string name="maintenance_select_car_need_maintenance">Chọn xe cần bảo trì</string>
+    <string name="maintenance_item_expected">Dự kiến:</string>
+    <string name="maintenance_item_go">Đi được:</string>
+    <string name="maintenance_item_distance">(%1$s km)</string>
+    <string name="maintenance_item_period">(%1$s ngày)</string>
+    <string name="maintenance_item_start_time">Tính từ:</string>
+
+    <!-- First Maintenance Fragment -->
+    <string name="first_maintenance_title">Xin chào !</string>
+    <string name="first_maintenance_desc_1">Tôi ở đây để hướng dẫn bạn tạo một lịch bảo trì mới cho xe</string>
+    <string name="first_maintenance_desc_2">Trước tiên, hãy chọn loại bảo trì nhé.</string>
+    <string name="first_maintenance_change_engine_oil">Thay nhớt máy</string>
+    <string name="first_maintenance_change_number_oil">Thay nhớt số</string>
+    <string name="first_maintenance_change_air_filter">Thay lọc gió</string>
+    <string name="first_maintenance_change_tire">Thay lốp</string>
+    <string name="first_maintenance_change_sprocket_slug_fork">Thay nhông - sên - dĩa</string>
+    <string name="first_maintenance_add_label">Nhập tên bảo trì</string>
+    <string name="first_maintenance_item_exist">%1$s đã có</string>
+
+    <!-- Second Maintenance Fragment -->
+    <string name="second_maintenance_title">Phương thức bảo trì</string>
+    <string name="second_maintenance_desc_1">Thông thường các bộ phận của xe sẽ được bảo trì theo chu kỳ một khoảng thời gian hoặc một quãng đường đã đi.</string>
+    <string name="second_maintenance_desc_2">Bạn có thề kết hợp cả 2 cách trên, điều kiện nào đến trước sẽ được ưu tiên nhắc nhở trước.</string>
+    <string name="second_maintenance_period">Theo chu kỳ thời gian</string>
+    <string name="second_maintenance_period_about">Sau %1$s Tháng</string>
+    <string name="second_maintenance_input_period">Nhập số tháng</string>
+    <string name="second_maintenance_distance">Theo quãng đường đã đi</string>
+    <string name="second_maintenance_distance_about">Sau %1$s km</string>
+    <string name="second_maintenance_input_distance">Nhập số km</string>
+    <string name="second_maintenance_required_select_one">Phải chọn 1 trong 2 cách tính</string>
+
+    <!-- Third Maintenance Fragment -->
+    <string name="third_maintenance_title">Lần bảo trì gần nhất</string>
+    <string name="third_maintenance_desc_1">Bằng cách cung cấp cho hệ thống lần bảo trì gần nhất của bạn, hệ thống sẽ tính toán thời gian hợp lý cho lần bảo trì tiếp theo.</string>
+    <string name="third_maintenance_select_the_last_time_maintenance">Chọn lần bảo trì gần nhất</string>
+    <string name="third_maintenance_today">Ngày hôm nay</string>
+    <string name="third_maintenance_select_other_day">Chọn 1 ngày khác</string>
+    <string name="third_maintenance_select_time">%1$s tháng trước</string>
+
+    <!-- Last Maintenance Fragment -->
+    <string name="last_maintenance_title">Wow, sắp xong rồi</string>
+    <string name="last_maintenance_desc_1">Dựa trên các thông tin bạn cung cấp, hệ thống đã tính toán lần bảo trì tiếp theo cho bạn.</string>
+    <string name="last_maintenance_desc_2">Nếu cần ghi chú thêm thông tin cho lần bảo trì này, bạn có thể thay đổi nội dung ghi chú.</string>
+    <string name="last_maintenance_remaining_km">Số km còn lại</string>
+    <string name="last_maintenance_km">%1$s km</string>
+    <string name="last_maintenance_next_maintenance_date">Ngày bảo trì tiếp theo</string>
+    <string name="last_maintenance_remaining_date_maintenance">(Còn %1$s ngày)</string>
+    <string name="last_maintenance_content_note">Nội dung ghi chú</string>
+    <string name="last_maintenance_due_date">Đã đến hạn</string>
+    <string name="last_maintenance_note">Ghi chú:</string>
+
+    <!-- Language -->
+    <string name="language_vi">Tiếng Việt</string>
+    <string name="language_en">English</string>
+
+    <!-- Message -->
+    <string name="msg_err_func_not_design">Not design</string>
+    <string name="msg_err_email_not_valid">Email is not valid</string>
+    <string name="msg_err_password_not_valid">Password is required to be more than 6 characters</string>
+    <string name="msg_err_old_password_not_valid">Old password is not valid</string>
+    <string name="msg_err_new_password_not_valid">New password is not valid</string>
+    <string name="msg_err_confirm_password_not_valid">Confirm password is not valid</string>
+    <string name="msg_question_you_want_to_delete">Bạn có chắc muốn xóa không?</string>
+</resources>

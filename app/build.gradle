@@ -1,0 +1,176 @@
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+    id "kotlin-kapt"
+    id "androidx.navigation.safeargs.kotlin"
+    id "dagger.hilt.android.plugin"
+//    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+//    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.vunh.first_demo_hilt'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.vunh.first_demo_hilt"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        def BASE_URL = "BASE_URL"
+        def SERVER_URL_DEV = '"http://192.168.20.226:8080/lseriesStandard-war/"'
+        def SERVER_URL_PRO = '"http://abc.com/lseriesStandard-war/"'
+        def CLIENT_ID = "CLIENT_ID"
+        def CLIENT_ID_DEV = '"ht"'
+        def CLIENT_ID_PRO = '"ht_pro"'
+        def CLIENT_SECRET = "CLIENT_SECRET"
+        def CLIENT_SECRET_DEV = '"lseriesStandard"'
+        def CLIENT_SECRET_PRO = '"lseriesStandard_pro"'
+        debug {
+            signingConfig signingConfigs.debug
+//            versionNameSuffix = dev.versionName
+            buildConfigField "String", BASE_URL, SERVER_URL_DEV
+            buildConfigField "String", CLIENT_ID, CLIENT_ID_DEV
+            buildConfigField "String", CLIENT_SECRET, CLIENT_SECRET_DEV
+        }
+        release {
+//            versionNameSuffix = pro.versionName
+            buildConfigField "String", BASE_URL, SERVER_URL_PRO
+            buildConfigField "String", CLIENT_ID, CLIENT_ID_PRO
+            buildConfigField "String", CLIENT_SECRET, CLIENT_SECRET_PRO
+//            shrinkResources true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def newName = "${versionName}_${getDateTime()}.apk"
+            outputFileName = newName
+        }
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11
+    }
+}
+
+static def getDateTime() {
+    DateFormat df = new SimpleDateFormat("ddMMyyyy")
+    return df.format(new Date())
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'androidx.viewpager2:viewpager2:1.1.0-beta01'
+    implementation 'androidx.navigation:navigation-fragment:2.5.3'
+    implementation 'androidx.navigation:navigation-ui:2.5.3'
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation"
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation 'androidx.databinding:databinding-runtime:7.4.0'
+    implementation 'androidx.recyclerview:recyclerview-selection:1.2.0-alpha01'
+
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
+
+    //Google service
+    //noinspection UseOfBundledGooglePlayServices
+//    implementation 'com.google.android.gms:play-services:12.0.1'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    //Firebase
+//    implementation platform('com.google.firebase:firebase-bom:31.2.0')
+//    implementation 'com.google.firebase:firebase-analytics'
+//    implementation 'com.google.firebase:firebase-messaging'
+//    implementation 'com.google.firebase:firebase-messaging-ktx'
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-moshi:2.8.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    //ktx
+    implementation "androidx.core:core-ktx:1.9.0"
+    implementation "androidx.activity:activity-ktx:1.6.1"
+    implementation "androidx.fragment:fragment-ktx:1.5.5"
+    //okhttp
+    implementation 'com.squareup.okhttp3:okhttp:4.8.1'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.8.1'
+    // rx
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.5.0"
+//    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+    //anko
+//    implementation "org.jetbrains.anko:anko:0.10.8"
+    // Glide
+    implementation "com.github.bumptech.glide:glide:4.13.2"
+    annotationProcessor "com.github.bumptech.glide:compiler:4.12.0"
+    //hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+//    //hilt-view-model
+//    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02'
+//    kapt 'androidx.hilt:hilt-compiler:1.0.0-alpha02'
+    // Room
+    implementation 'androidx.room:room-runtime:2.5.0'
+    implementation 'androidx.room:room-rxjava2:2.5.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt 'androidx.room:room-compiler:2.5.0'
+    implementation  'androidx.room:room-ktx:2.5.0'
+    // coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    //multidex
+    implementation 'androidx.multidex:multidex:2.0.1'
+    //toggle button
+    implementation 'nl.bryanderidder:themed-toggle-button-group:1.4.1'
+    //banner view
+//    implementation 'com.github.zhpanvip:bannerviewpager:3.5.2'
+    // eventbus
+    implementation 'org.greenrobot:eventbus:3.2.0'
+
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'pub.devrel:easypermissions:3.0.0'
+}

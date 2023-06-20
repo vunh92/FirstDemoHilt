@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fitsSystemWindows="true">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="?attr/colorPrimary"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_gravity="center"
+            android:text="@string/maintenance_title"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <include android:id="@+id/layout_maintenance_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        layout="@layout/layout_maintenance_empty"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/layout_maintenance_list_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_marginHorizontal="@dimen/margin_default"
+        android:visibility="gone" >
+        <RelativeLayout
+            android:id="@+id/maintenance_list_label_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/DefaultTextView.Label"
+                android:id="@+id/maintenance_list_label_tv"
+                android:layout_alignParentStart="true"
+                tools:text="Demo (1)"/>
+            <ImageView
+                android:id="@+id/maintenance_list_label_iv"
+                android:layout_width="@dimen/size_icon_default"
+                android:layout_height="@dimen/size_icon_default"
+                android:src="@drawable/ic_time"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:tint="@color/grey" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/maintenance_list_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/maintenance_list_label_rl"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_maintenance_list"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

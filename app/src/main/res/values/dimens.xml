@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="nav_header_height">200dp</dimen>
+    <dimen name="picture_size">300dp</dimen>
+    <dimen name="appbar_height">48dp</dimen>
+    <dimen name="activity_horizontal_margin">@dimen/_16ssp</dimen>
+    <dimen name="activity_vertical_margin">@dimen/_16ssp</dimen>
+    <dimen name="fab_margin">@dimen/_16ssp</dimen>
+    <dimen name="progress_bar_height">@dimen/_8ssp</dimen>
+    <dimen name="size_width_button_default">@dimen/_100ssp</dimen>
+    <dimen name="indicator_size">@dimen/_3ssp</dimen>
+
+    <dimen name="padding_default">@dimen/_8ssp</dimen>
+    <dimen name="padding_large">@dimen/_32ssp</dimen>
+    <dimen name="padding_high">@dimen/_16ssp</dimen>
+    <dimen name="padding_medium">@dimen/_12ssp</dimen>
+    <dimen name="padding_small">@dimen/_4ssp</dimen>
+    <dimen name="padding_extra_extra_small">@dimen/_2ssp</dimen>
+
+    <dimen name="margin_default">@dimen/_8ssp</dimen>
+    <dimen name="margin_large">@dimen/_32ssp</dimen>
+    <dimen name="margin_high">@dimen/_16ssp</dimen>
+    <dimen name="margin_medium">@dimen/_12ssp</dimen>
+    <dimen name="margin_small">@dimen/_4ssp</dimen>
+    <dimen name="margin_extra_extra_small">@dimen/_2ssp</dimen>
+
+    <dimen name="radius_default">@dimen/_8ssp</dimen>
+    <dimen name="radius_large">@dimen/_32ssp</dimen>
+    <dimen name="radius_high">@dimen/_16ssp</dimen>
+    <dimen name="radius_medium">@dimen/_12ssp</dimen>
+    <dimen name="radius_small">@dimen/_4ssp</dimen>
+    <dimen name="radius_extra_extra_small">@dimen/_2ssp</dimen>
+
+    <dimen name="size_default">@dimen/_8ssp</dimen>
+    <dimen name="size_larger">@dimen/_48ssp</dimen>
+    <dimen name="size_large">@dimen/_32ssp</dimen>
+    <dimen name="size_higher">@dimen/_24ssp</dimen>
+    <dimen name="size_high">@dimen/_16ssp</dimen>
+    <dimen name="size_medium">@dimen/_12ssp</dimen>
+    <dimen name="size_small">@dimen/_4ssp</dimen>
+    <dimen name="size_extra_extra_small">@dimen/_2ssp</dimen>
+
+    <dimen name="size_logo_default">@dimen/_24ssp</dimen>
+    <dimen name="size_logo_small">@dimen/_18ssp</dimen>
+    <dimen name="size_logo_medium">@dimen/_30ssp</dimen>
+    <dimen name="size_logo_large">@dimen/_50ssp</dimen>
+
+    <dimen name="size_icon_default">@dimen/_20ssp</dimen>
+    <dimen name="size_icon_small">@dimen/_14ssp</dimen>
+    <dimen name="size_icon_medium">@dimen/_26ssp</dimen>
+    <dimen name="size_icon_high">@dimen/_32ssp</dimen>
+
+    <dimen name="text_size_large">24sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_default">14sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+
+    <dimen name="size_avatar_default">@dimen/_60ssp</dimen>
+    <dimen name="size_avatar_high">@dimen/_90ssp</dimen>
+    <dimen name="size_avatar_medium">@dimen/_75ssp</dimen>
+    <dimen name="size_avatar_small">@dimen/_30ssp</dimen>
+</resources>
