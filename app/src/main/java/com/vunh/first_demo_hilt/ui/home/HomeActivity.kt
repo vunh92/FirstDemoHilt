@@ -15,6 +15,8 @@ import androidx.core.view.*
 import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
 import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.navigation.NavigationView
 import com.google.gson.Gson
 import com.vunh.first_demo_hilt.R
@@ -22,8 +24,10 @@ import com.vunh.first_demo_hilt.base.BaseActivity
 import com.vunh.first_demo_hilt.database.AppDatabase
 import com.vunh.first_demo_hilt.databinding.ActivityHomeBinding
 import com.vunh.first_demo_hilt.database.AppSharePref
+import com.vunh.first_demo_hilt.models.Prediction
 import com.vunh.first_demo_hilt.models.Profile
 import com.vunh.first_demo_hilt.models.User
+import com.vunh.first_demo_hilt.ui.customview.BottomSheetSelectItem
 import com.vunh.first_demo_hilt.ui.notification.NotificationActivity
 import com.vunh.first_demo_hilt.ui.test.TestListActivity
 import com.vunh.first_demo_hilt.utils.AppUtils
@@ -219,6 +223,17 @@ class HomeActivity : BaseActivity() , NavigationView.OnNavigationItemSelectedLis
         homeBottomSheetBehavior.addBottomSheetCallback(bottomSheetCallback)
         // To remove the callback:
         homeBottomSheetBehavior.removeBottomSheetCallback(bottomSheetCallback)
+
+        val settingBtn = binding.layoutBottomSheet.bottomSheet.findViewById<MaterialButton>(R.id.bottom_sheet_setting_btn)
+        settingBtn.setOnClickListener {
+            bottomSheetSetting()
+        }
+    }
+
+    private fun bottomSheetSetting() {
+        if (supportFragmentManager.findFragmentByTag(HomeBottomSheetSetting.TAG) != null) return
+        val dialog = HomeBottomSheetSetting()
+        dialog.show(supportFragmentManager, HomeBottomSheetSetting.TAG)
     }
 
     @SuppressLint("SetTextI18n")

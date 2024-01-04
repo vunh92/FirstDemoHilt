@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             app:behavior_hideable="true"
-            app:behavior_peekHeight="130dp"
+            app:behavior_peekHeight="180dp"
             app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
